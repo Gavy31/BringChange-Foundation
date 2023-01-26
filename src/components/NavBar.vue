@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="black" dark>
   <v-container class="d-flex flex-row ">
-    <v-btn icon="">Title</v-btn>
+    <v-btn>Title</v-btn>
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn variant="plain"> Mission</v-btn>
