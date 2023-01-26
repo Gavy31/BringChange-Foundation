@@ -1,19 +1,26 @@
 <template>
 <v-app>
-    <v-main>
-        <HelloWorld />
-    </v-main>
+      <Navbar />
+    <v-footer
+    app
+    color="black"
+    dark
+    >
+      <FooterInf />
+    </v-footer>
 </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/NavBar.vue'
+import FooterInf from './components/Footer.vue';
 
 export default {
     name: 'App',
 
     components: {
-        HelloWorld,
+        Navbar,
+        FooterInf
     },
 
     data: () => ({
