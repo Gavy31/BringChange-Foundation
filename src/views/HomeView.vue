@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Navbar />
-  </div>
+  <v-layout row>
+  </v-layout>
 </template>
 
 <script>
 // @ is an alias to /src
-import Navbar from '@/components/NavBar.vue'
+
 
 export default {
   name: 'HomeView',
   components: {
-    Navbar
+
   }
 }
 </script>

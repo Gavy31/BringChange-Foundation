@@ -26,14 +26,10 @@
 
 
 <script>
-import Navigationdrawer from './Navigationdrawer.vue';
 export default {
     data: () => ({
-        drawer: true
+   
     }),
-    components: {
-        Navigationdrawer
-    },
     name: 'NavBar'
 
 }
