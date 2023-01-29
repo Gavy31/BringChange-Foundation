@@ -1,5 +1,5 @@
 <template>
-<v-app class="bg-grey-lighten-1">
+<v-app class="bg-grey-lighten-3">
     <v-app-bar app color="black" dark>
         <v-img class="ml-15 mr-n2" src="@/assets/water-drop.svg" max-width="5%" contain></v-img>
         <div class="d-flex justify-center">
@@ -15,8 +15,9 @@
         {{ navItem }}
       </div> -->
         <!-- <v-btn variant="plain" > {{navItem}}</v-btn> -->
-        <v-btn variant="plain" class="hidden-sm-and-down"> Mission</v-btn>
-        <v-btn variant="plain" class="hidden-sm-and-down"> Initiatives</v-btn>
+        <v-btn variant="plain" to="/" class="hidden-sm-and-down"> Home</v-btn>
+        <v-btn variant="plain" to="Mission" class="hidden-sm-and-down"> Mission</v-btn>
+        <v-btn variant="plain" to="About" class="hidden-sm-and-down"> Initiatives</v-btn>
         <v-btn variant="plain" class="hidden-sm-and-down"> About</v-btn>
         <v-btn variant="plain" class="hidden-sm-and-down"> Blog</v-btn>
         <v-btn class="bg-blue-darken-2" rounded="lg"> Donate</v-btn>
@@ -29,10 +30,19 @@
                 mdi-close
             </v-icon>
         </v-btn>
-        <v-list :items="items"></v-list>
+        <v-list>
+        <v-list-item
+          v-for="(item,i) in items"
+          :key="i"
+          :to="item.value"
+          link
+          >
+          <v-list-item-title>{{item.title}}</v-list-item-title>
+          </v-list-item>
+        </v-list>
     </v-navigation-drawer>
-    <HomeView />
     <v-main>
+      <router-view></router-view>
     </v-main>
 
     <v-footer absolute color="black" dark>
@@ -43,22 +53,27 @@
 
 <script>
 import FooterInf from './components/Footer.vue';
-import HomeView from './views/HomeView.vue'
+// import HomeView from './views/HomeView.vue'
 export default {
     name: 'App',
     components: {
 
-        FooterInf,
-        HomeView
+         FooterInf,
+        // HomeView
 
     },
     data: () => ({
         drawer: false,
         group: null,
         items: [{
+                title: 'Home',
+                value: '/'
+            },
+            {
                 title: 'Mission',
                 value: 'Mission'
             },
+
             {
                 title: 'Initiatives',
                 value: 'Inititatives'

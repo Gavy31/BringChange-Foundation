@@ -1,5 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
+import HeadBanner from '@/components/HeadBanner.vue';
+import TimelineHome from '@/components/TimelineHome.vue';
 
 const agegroups =reactive({
   
@@ -18,52 +20,58 @@ const agegroups =reactive({
 
 // }
 const timeline=reactive([{
-    imgsrc: require("@/assets/innovation.svg"),
-    title: "Innovate",
-    class:"text-blue-darken-3 text-h6 font-weight-bold",
-    description:"done"
+  imgsrc: require("@/assets/innovation.svg"),
+  title: "Innovate",
+  class:"text-blue-darken-3 text-h5 font-weight-bold",
+  description:"Innovate / collaborate for solutions that foster emotional resilience and wellbeing at scale"
 },
 {
-  imgsrc:require('@/assets/implement.svg'),
-  title:"Implement",
-  class:"text-green-accent-3 text-h6 font-weight-bold",
-  description:"done"
+imgsrc:require('@/assets/implement.svg'),
+title:"Implement",
+class:"text-green-accent-3 text-h5 font-weight-bold",
+description:"Implement evidence-based, globally acclaimed solutions that drive systemic change"
 },
 {
-  imgsrc:require('@/assets/inspiration.svg'),
-  title:"Inspire",
-  class:"text-pink-accent-3 text-h6 font-weight-bold",
-  description:"done"
+imgsrc:require('@/assets/inspiration.svg'),
+title:"Inspire",
+class:"text-pink-accent-3 text-h5 font-weight-bold",
+description:"Inspire educators/leaders/administrators to introduce 2-3 minutes of self-reflection time daily for their community members"
 },
 {
-  imgsrc:require('@/assets/empower.svg'),
-  title:"Empower",
-  class:"text-pink-accent-3 text-h6 font-weight-bold",
-  description:"done"
+imgsrc:require('@/assets/empower.svg'),
+title:"Empower",
+class:"text-pink-accent-3 text-h5 font-weight-bold",
+description:"Empower individuals to self-reflect and express their thoughts, feelings, and emotions by providing them with trusted and secure space"
 },
 {
-  imgsrc:require('@/assets/identify.svg'),
-  title:"Identity",
-  class:"text-pink-accent-3 text-h6 font-weight-bold",
-  description:"done"
+imgsrc:require('@/assets/identify.svg'),
+title:"Identity",
+class:"text-pink-accent-3 text-h5 font-weight-bold",
+description:"Identify at-risk individuals and the roots of risks in the environment ( personal, academic, professional, social ) proactively"
 },
 {
-  imgsrc:require('@/assets/ondemand.svg'),
-  title:"Enable",
-  class:"text-pink-accent-3 text-h6 font-weight-bold",
-  description:"done"
+imgsrc:require('@/assets/ondemand.svg'),
+title:"Enable",
+class:"text-pink-accent-3 text-h5 font-weight-bold",
+description:"Enable on-demand care for those who need the most, bridge supply-demand gap in the wellbeing ecosystem, and foster prevention and early intervention at scale"
 }
 ])
 console.log(timeline.imgsrc)
 </script>
 
 <template>
-<v-card class="first-card" >
-    <v-img src="@/assets/banner.jpeg" height=100% width="100%">
-        <v-card flat color="transparent">
-        </v-card>
+
+<HeadBanner>
+  <v-card class="first-card justify-center align-center" >
+    <v-img src="@/assets/banner.jpeg">
     </v-img>
 </v-card>
+</HeadBanner>
+
+ <!-- <v-card class="first-card" >
+    <v-img src="@/assets/banner.jpeg">
+    </v-img>
+</v-card>  -->
 <v-container align="center" class="mt-n10 px-0 hidden-sm-and-down">
         <v-card class="second-card mx-auto justify-center">
             
@@ -150,9 +158,9 @@ console.log(timeline.imgsrc)
 </p>
 <p>{{ piece.description }}</p>
 </v-sheet>
-
 </v-container>
 <v-container>
+  <TimelineHome/>
 </v-container>
 </template>
 
