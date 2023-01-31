@@ -42,7 +42,7 @@ console.log(timeline.imgsrc)
 </script>
 <template>
   <v-sheet class="text-md-h5 my-4 text-center" color="grey-lighten-3">We inspire “systemic change”</v-sheet>
-    <v-timeline class="hidden-sm-and-down justify-center ">
+    <v-timeline class="hidden-sm-and-down align-center">
       <v-timeline-item 
       v-for="(piece,i) in timeline"
       :key="i"
