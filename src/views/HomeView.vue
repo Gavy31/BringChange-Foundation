@@ -61,11 +61,8 @@ console.log(timeline.imgsrc)
 
 <template>
 
-<HeadBanner>
-  <v-card class="first-card justify-center align-center" >
-    <v-img src="@/assets/banner.jpeg">
-    </v-img>
-</v-card>
+<HeadBanner src="banner.jpeg">
+
 </HeadBanner>
 
  <!-- <v-card class="first-card" >

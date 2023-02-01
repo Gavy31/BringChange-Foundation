@@ -27,7 +27,7 @@ defineProps(['Name','Exmenu']);
           :key="index"
           :to="item.value"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-btn variant="plain" >{{ item.value }}</v-btn>
         </v-list-item>
       </v-list>
     </v-menu>

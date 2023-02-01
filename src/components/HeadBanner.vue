@@ -9,13 +9,14 @@
 //  }
 </script>
 <template>
-    <v-card class="first-card align-center justify-center" >
+    <v-responsive aspect-ratio="16/9">
+    <v-card class="first-card align-center justify-center bg-black" >
     <slot/>
-        <!-- <v-img :src="require('@/assets/' + src)" >
-        <span class="text-white text-h1">Hello</span>
-    </v-img> -->
+        <v-img :src="require('@/assets/' + src)" >
+    </v-img>
     
 </v-card>
+    </v-responsive>
 </template>
 
 <style scoped>

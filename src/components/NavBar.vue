@@ -14,6 +14,16 @@ const navbuttons=[{
             {
                 title: 'Blog',
                 value: 'Blog'
+        },{
+          title: 'Initiatives',
+          value:[{
+                title: 'Unicef',
+                value: 'Unicef'
+            },
+            {
+                title: 'Malaysia',
+                value: 'Malaysia'
+            }]
         }]
 const Inititatives=[{
                 title: 'Unicef',
@@ -22,6 +32,19 @@ const Inititatives=[{
             {
                 title: 'Malaysia',
                 value: 'Malaysia'
+            }]
+const About=[{
+              title: 'Partners',
+              value: 'Partners'
+              
+            },
+            {
+                title: 'Team',
+                value: 'Team'
+            },
+            {
+                title: 'Contact',
+                value: 'Contact'
             }]
 </script>
 
@@ -43,32 +66,10 @@ const Inititatives=[{
       </v-btn> -->
         <!-- <v-btn variant="plain" to="/" class="hidden-sm-and-down"> -->
           <v-btn variant="plain" to="/" class="hidden-sm-and-down"> Home</v-btn>
-
-<v-menu
-      open-on-hover
-    >
-      <template v-slot:activator="{ props }">
-        <v-btn
-          variant="plain"
-          v-bind="props"
-        >
-          Initiatives
-        </v-btn>
-      </template>
-
-      <v-list class="bg-black dark">
-        <v-list-item
-          v-for="(item, index) in Inititatives"
-          :key="index"
-          :to="item.value"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-        <v-btn  variant="plain" to="Mission" class="hidden-sm-and-down"> Mission</v-btn>
+          <v-btn  variant="plain" to="Mission" class="hidden-sm-and-down"> Mission</v-btn>
+          <ExtendMenu Name="Initiatives" :Exmenu="Inititatives"/>
         <!-- <v-btn variant="plain" class="hidden-sm-and-down"> About</v-btn> -->
-        <ExtendMenu Name="About" :Exmenu=Inititatives />
+        <ExtendMenu Name="About" :Exmenu="About" />
         <v-btn variant="plain" class="hidden-sm-and-down"> Blog</v-btn>
         <v-btn class="bg-blue-darken-2" rounded="lg"> Donate</v-btn>
         <v-app-bar-nav-icon class="hidden-md-and-up" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -88,6 +89,7 @@ const Inititatives=[{
           link
           >
           <v-list-item-title>{{item.title}}</v-list-item-title>
+         
           </v-list-item>
         </v-list>
     </v-navigation-drawer>

@@ -6,6 +6,7 @@ import InitiativesMalaysia from '../views/InitiativesMalaysia.vue'
 import InitiativesUnicef from '../views/InitiativesUnicef.vue'
 import AboutTeam from '../views/AboutTeam.vue'
 import AboutContact from '../views/AboutContact.vue'
+import AboutPartners from '../views/AboutPartners.vue'
 
 const routes = [
   {
@@ -24,34 +25,32 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/Initiatives/:id',
-    component:{template : <router-view></router-view>},
-    children:[{
-      
       name: 'Unicef',
       path:'/unicef',
-      component: InitiativesMalaysia},
-      {
+      component: InitiativesMalaysia
+  },
+  {
       name:'Malaysia',
       path: '/malaysia',
       component: InitiativesUnicef
-    }]
-  },
+    },
   {
-    path: '/About/:id',
-    component:{template : <router-view></router-view>},
-    children:[{
       
       name: 'Team',
       path:'/team',
-      component: AboutTeam},
+      component: AboutTeam
+  },
       {
       name:'Contact',
       path: '/contact',
       component: AboutContact
-    }]
-  }
-]
+    },
+    {
+      name:'Partners',
+      path: '/partners',
+      component: AboutPartners
+    }
+  ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
