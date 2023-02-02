@@ -71,7 +71,7 @@ console.log(timeline.imgsrc)
     </v-img>
 </v-card>  -->
 <v-container align="center" class="mt-n10 px-0 hidden-sm-and-down">
-        <v-card class="second-card mx-auto justify-center">
+        <v-card class="second-card my-n10 mx-n10 justify-center">
             
               <v-sheet class="justify-center text-h5 my-8 font-weight-light">
                 Impact of COVID-19 on mental health
@@ -108,7 +108,7 @@ console.log(timeline.imgsrc)
         </v-card>
 </v-container>
 <v-container align="center" class="ma-0 pa-0 hidden-md-and-up">
-        <v-card class="second-card mx-auto justify-center">
+        <v-card class="second-card ma-0 pa-0 justify-center">
             
               <v-sheet class="justify-center text-h5 my-7 font-weight-light">
                 Impact of COVID-19 on mental health
@@ -170,8 +170,8 @@ console.log(timeline.imgsrc)
     }
 
     .second-card {
-        border-top-left-radius: 50% ;
-        border-top-right-radius: 50% ;
+        border-top-left-radius: 50% 50%;
+        border-top-right-radius: 50%  50%;
     }
 
 }
