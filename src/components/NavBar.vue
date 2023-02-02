@@ -70,7 +70,7 @@ const About=[{
           <ExtendMenu Name="Initiatives" :Exmenu="Inititatives"/>
         <!-- <v-btn variant="plain" class="hidden-sm-and-down"> About</v-btn> -->
         <ExtendMenu Name="About" :Exmenu="About" />
-        <v-btn variant="plain" class="hidden-sm-and-down"> Blog</v-btn>
+        <v-btn variant="plain" to="Blog" class="hidden-sm-and-down"> Blog</v-btn>
         <v-btn class="bg-blue-darken-2" rounded="lg"> Donate</v-btn>
         <v-app-bar-nav-icon class="hidden-md-and-up" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <Navigationdrawer />

@@ -3,11 +3,10 @@ import HeadBanner from '@/components/HeadBanner.vue';
 </script>
 
 <template>
-    <HeadBanner>
-        <v-card class="first-card justify-center align-center" >
-    <v-img src="@/assets/banner_mission.jpg">
-    </v-img>
-</v-card>
+    <HeadBanner src="banner_mission.jpg" offsetmd="6">
+      <div class="text-md-h6 text-body-1">we exist to foster emotional resilience and 
+      wellbeing at scale - globally and to serve those who are impacted by 
+      emotional health issues</div>
     </HeadBanner>
 
     <v-container align="center" class="mt-n10 px-0 hidden-sm-and-down">

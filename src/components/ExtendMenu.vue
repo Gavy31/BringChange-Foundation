@@ -15,6 +15,7 @@ defineProps(['Name','Exmenu']);
         <v-btn
           variant="plain"
           v-bind="props"
+          class="hidden-sm-and-down"
         >
           {{Name}}
 

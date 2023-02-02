@@ -61,8 +61,9 @@ console.log(timeline.imgsrc)
 
 <template>
 
-<HeadBanner src="banner.jpeg">
-
+<HeadBanner src="banner.jpeg" align="center">
+  <div class="text-center text-h6 text-md-h4">“Nurturing wellbeing at scale, globally”</div>
+  <div class="text-center text-body-1 text-md-h5 pt-1">There is no health or quality education without mental health</div>
 </HeadBanner>
 
  <!-- <v-card class="first-card" >

@@ -1,7 +1,5 @@
 <script setup>
 import HeadBanner from '@/components/HeadBanner.vue';
-
-
 </script>
 
 <template>
@@ -10,7 +8,7 @@ import HeadBanner from '@/components/HeadBanner.vue';
 <v-container align="center" class="ma-0 pa-0 hidden-md-and-up">
         <v-card class="second-card mx-auto justify-center">
         </v-card>
-        </v-container>
+</v-container>
 </template>
 <style scoped>
 @media screen and (min-width:960px) {

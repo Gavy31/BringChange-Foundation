@@ -7,6 +7,7 @@ import InitiativesUnicef from '../views/InitiativesUnicef.vue'
 import AboutTeam from '../views/AboutTeam.vue'
 import AboutContact from '../views/AboutContact.vue'
 import AboutPartners from '../views/AboutPartners.vue'
+import BlogView from '../views/BlogView.vue'
 
 const routes = [
   {
@@ -27,12 +28,12 @@ const routes = [
   {
       name: 'Unicef',
       path:'/unicef',
-      component: InitiativesMalaysia
+      component: InitiativesUnicef
   },
   {
       name:'Malaysia',
       path: '/malaysia',
-      component: InitiativesUnicef
+      component: InitiativesMalaysia
     },
   {
       
@@ -49,6 +50,11 @@ const routes = [
       name:'Partners',
       path: '/partners',
       component: AboutPartners
+    },
+    {
+      name:'Blog',
+      path: '/blog',
+      component: BlogView
     }
   ]
 
