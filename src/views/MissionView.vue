@@ -10,7 +10,7 @@ import HeadBanner from '@/components/HeadBanner.vue';
     </HeadBanner>
 
     <v-container align="center" class="mt-n10 px-0 hidden-sm-and-down">
-        <v-card class="second-card mx-auto justify-center">
+        <v-card class="second-card my-n10 mx-auto justify-center">
             
               <v-sheet class="justify-center text-h5 my-8 font-weight-light">
                 Impact of COVID-19 on mental health

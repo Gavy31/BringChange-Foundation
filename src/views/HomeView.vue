@@ -2,6 +2,9 @@
 import { reactive } from 'vue'
 import HeadBanner from '@/components/HeadBanner.vue';
 import TimelineHome from '@/components/TimelineHome.vue';
+import CarouselSlide from '@/components/CarouselQuote.vue';
+import CarouselPartner from '@/components/CarouselPartner.vue';
+
 
 const agegroups =reactive({
   
@@ -70,8 +73,8 @@ console.log(timeline.imgsrc)
     <v-img src="@/assets/banner.jpeg">
     </v-img>
 </v-card>  -->
-<v-container align="center" class="mt-n10 px-0 hidden-sm-and-down">
-        <v-card class="second-card my-n10 mx-n10 justify-center">
+<v-container align="center" class=" px-0 hidden-sm-and-down">
+        <v-card class="second-card my-n10 mx-auto justify-center">
             
               <v-sheet class="justify-center text-h5 my-8 font-weight-light">
                 Impact of COVID-19 on mental health
@@ -160,6 +163,10 @@ console.log(timeline.imgsrc)
 <v-container>
   <TimelineHome/>
 </v-container>
+<CarouselSlide />
+
+<CarouselPartner />
+
 </template>
 
 <style scoped>

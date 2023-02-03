@@ -54,7 +54,7 @@ const blogheads=[{src:"1.jpeg",
     <v-container align="center" justify="center" class="mt-n16 pt-n16">
     <v-row class="pa-0 ma-0">
     <v-col 
-    sm=12 md=4 xl=3 col=12
+   md=4 xl=3 cols=12
     v-for="(blogs,i) in blogheads"
     :key="i">
       <v-card to="About" >
