@@ -28,12 +28,12 @@ Mission-Driven Team
 <v-col
 v-for="(mem,i) in team"
 :key="i"
-md="4" sm="6" col="12" >
+md="4" sm="6" cols="12" >
     <v-card class="rounded-xl"  align="center" min-height="270">
     <v-avatar color="blue-darken-2" class="my-2" size="138">
         <v-avatar size="130">
       <v-img
-        :src="require('@/assets/team/'+mem.url)" min-height="80vh"></v-img>
+        :src="require('@/assets/team/'+mem.url)" cover ></v-img>
         </v-avatar>
     </v-avatar>
    <div class="text-subtitle-1"> {{mem.Name}} </div>

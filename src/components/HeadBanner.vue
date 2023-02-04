@@ -16,7 +16,7 @@
 
     <v-card class="first-card bg-black ma-0 pa-0 ">
 
-        <v-img :src="require('@/assets/' + src)" aspect-ratio="16/9" cover gradient="to top left,rgba(0,0,0,.4),rgba(0,0,0,.4)">
+        <v-img :src="require('@/assets/' + src)" cover gradient="to top left,rgba(0,0,0,.4),rgba(0,0,0,.4)">
         <v-row align="center first-card small-card" >
         <v-col :align="align" :offset-md="offsetmd">
             <slot/>      
@@ -40,7 +40,7 @@
 @media screen and (max-width:960px){
     
 .small-card{
-        height:50vh;
+        height:80vh;
     }
 }
 </style>

@@ -41,7 +41,7 @@ description:"Enable on-demand care for those who need the most, bridge supply-de
 console.log(timeline.imgsrc)
 </script>
 <template>
-  <v-sheet class="text-md-h5 my-4 text-center" color="grey-lighten-3">We inspire “systemic change”</v-sheet>
+  <v-sheet class="text-md-h5 my-4 text-center hidden-sm-and-down" color="grey-lighten-3">We inspire “systemic change”</v-sheet>
     <v-timeline class="hidden-sm-and-down align-center">
       <v-timeline-item 
       v-for="(piece,i) in timeline"

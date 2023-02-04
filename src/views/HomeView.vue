@@ -1,17 +1,12 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive } from 'vue';
+import { useDisplay} from 'vuetify';
 import HeadBanner from '@/components/HeadBanner.vue';
 import TimelineHome from '@/components/TimelineHome.vue';
 import CarouselSlide from '@/components/CarouselQuote.vue';
 import CarouselPartner from '@/components/CarouselPartner.vue';
 
-
-const agegroups =reactive({
-  
-  ageA :"Age 05-11",
-  ageB :"Age 12-17"
-
-})
+const {mdAndUp} = useDisplay()
 // const timelinepart = (imgsrc,title,color,description) =>{
 
 //   return {
@@ -73,8 +68,8 @@ console.log(timeline.imgsrc)
     <v-img src="@/assets/banner.jpeg">
     </v-img>
 </v-card>  -->
-<v-container align="center" class=" px-0 hidden-sm-and-down">
-        <v-card class="second-card my-n10 mx-auto justify-center">
+<v-container align="center" :class="mdAndUp ? 'px-0' :'ma-0 pa-0' ">
+        <v-card flat :class="mdAndUp ?'second-card my-n10 mx-auto justify-center' : ' ma-0 pa-0 justify-center'">
             
               <v-sheet class="justify-center text-h5 my-8 font-weight-light">
                 Impact of COVID-19 on mental health
@@ -83,34 +78,49 @@ console.log(timeline.imgsrc)
                 <span class=text-red-darken-2>'State of Emergency'</span>
                 in child and adolescent mental health, globally
               </v-sheet>
-            <v-row>
-            <v-col col="6">
-            <v-sheet>
-                 <v-row>
-                    <v-col v-for="age in agegroups"
-                    :key=age
-                    md="6"
-                    sm="6"
-                    >
-                        <v-sheet class="mx-auto my-5 text-h5 justify-center" flat>
-                          <div>
-                          Mental Health Emergencies
-                          </div>
-                          <div class=text-red-darken-2>
-                          {{ age }}
-                          </div>
-                        </v-sheet>
-                    </v-col>
+    <v-card flat class="text-h5 font-weight-light">
+          <v-row align="center" justify="center">
+            <v-col md="4" cols="12">
+              <div text--centered>
+              Mental Health Emergencies
+              </div>
+              <div class="pt-6">
+                  <v-row align=center justify="center">
+                      <v-col cols="5">
+                        <div>Age 05-11 
+                        </div>
+                        <div class="pt-1">24
+                        </div>
+                      </v-col>
+                      <v-col cols="5">
+                        <div>Age 05-11 
+                        </div>
+                        <div class="pt-1" >24
+                        </div>
+                      </v-col>
                   </v-row>
-                </v-sheet>
-                <v-sheet>
-                Hello
-                </v-sheet>
+              </div>
             </v-col>
-            </v-row>
-        </v-card>
+            <v-col md="4" cols="12">
+              <div text--centered>
+                Suicide Attempts among Girls
+              </div>
+              <div class="pt-6">
+                  <v-row align=center justify="center">
+                      <v-col cols="5">
+                        Age 12-17
+                      
+                        <div class="pt-1"><v-badge icon="mdi-trending-up">51</v-badge><span class="text-caption">%</span>
+                        </div>
+                      </v-col>
+                  </v-row>
+              </div>
+            </v-col>  
+        </v-row>
+    </v-card>
+    </v-card>
 </v-container>
-<v-container align="center" class="ma-0 pa-0 hidden-md-and-up">
+<!-- <v-container align="center" class="ma-0 pa-0 hidden-md-and-up">
         <v-card class="second-card ma-0 pa-0 justify-center">
             
               <v-sheet class="justify-center text-h5 my-7 font-weight-light">
@@ -145,8 +155,8 @@ console.log(timeline.imgsrc)
 
             </v-row>
         </v-card>
-</v-container>
-<v-container align="center" class="hidden-md-and-up" >
+</v-container> -->
+<v-container align="center" class="hidden-md-and-up mx-0 px-0" >
 <v-sheet class="text-h5">We inspire “systemic change”</v-sheet>
 
 <v-sheet flat align="center"
