@@ -1,7 +1,24 @@
 <script setup>
 import HeadBanner from '@/components/HeadBanner.vue';
 import CurvedCard from '@/components/CurvedCard.vue';
+import QuoteSlide from '@/components/QuoteSlide.vue';
+import CarouselPartner from '@/components/CarouselPartner.vue';
 
+const anecs=[{
+  
+  img:"rinnie_russo.webp"
+  ,quote:"We are excited to be embarking on our year long journey with TrustCircle to monitor, support and track the social and emotional health of every single child in our school. We worry about every child and to have a safety net in case any slips through the crack is peace of mind. We are looking forward to seeing how this platform functions over the coming year especially in an inclusive environment such as ours, with children of differing needs."
+  ,Name:"Rinnie Russo"
+  ,desg:"Founder and Head of School, The Surin Academy"
+},{
+  
+  img:"quek_sue_yian.webp"
+  ,quote:"I am deeply grateful to TrustCircle -.the moment it was presented to us we wanted the system but given our school size and impact of lockdown we had no liquidity to afford this important platform. Having a year's access, means so much to us, especially knowing that we are working with hearts rather than monetary gain of the creators of this platforms makes me feel certain that TrustCircle will be for us and continue to grow to be a valuable tool for any school or communities that work with children."
+  ,Name:"Quek Sue Yian"
+  ,desg:"Founder, The Surin Academy"
+}]
+
+const logos=[{src:"trustcircle.png"},{src:"smiling.png"}]
 </script>
 
 <template>
@@ -45,5 +62,7 @@ import CurvedCard from '@/components/CurvedCard.vue';
    </v-card>
    </a>
     </v-card>
+    <CarouselPartner heading="Supported By" :logosrc=logos />
+    <QuoteSlide :anecs="anecs" />
     </v-container>
 </template>

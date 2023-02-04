@@ -3,7 +3,7 @@ import { reactive } from 'vue';
 import { useDisplay} from 'vuetify';
 import HeadBanner from '@/components/HeadBanner.vue';
 import TimelineHome from '@/components/TimelineHome.vue';
-import CarouselSlide from '@/components/CarouselQuote.vue';
+import QuoteSlide from '@/components/QuoteSlide.vue';
 import CarouselPartner from '@/components/CarouselPartner.vue';
 
 const {mdAndUp} = useDisplay()
@@ -17,6 +17,51 @@ const {mdAndUp} = useDisplay()
 //   }
 
 // }
+const anecs=[{
+  
+  img:"yana-kachurina.png"
+  ,quote:"We are privileged to have BringChange Founation among our grantees. By leveraging the technology, the organization is creating a systemic shift in the way we see and prevent mental health issues. This is of upmost importance, especially in times of isolation and uncertainty that we are all going through. By focusing on youth, the organization is bringing early intervention, preventing further escalation and contributing to a brighter and healthier future for all. This is in line with the Sofina Covid Solidarity Fund mission which seeks to address the adverse consequences the global Covid-19 pandemic has created in education and healthcare sectors."
+  ,Name:"Yana Kachurina"
+  ,desg:"Management Committee Member, Sofina Covid Solidarity Fund"
+},{
+  
+  img:"jack-sim.jpeg"
+  ,quote:"School's stress on the mental health of children can be a silent killer. Teens suicide in Singapore jumped 37.5% in 2020. We need TrustCircle to detect early signs and prevent an explosion of mental health issues among our kids."
+  ,Name:"Prof Dr Jack Sim"
+  ,desg:"Founder of the World Toilet Organisation and BOP HUB"
+},{
+  
+  img:"bill-drayton.jpg"
+  ,quote:"TrustCircle team is developing such powerful tools that are putting power, responsibility, and initiative in the hands of everyone is huge and hugely important contribution"
+  ,Name:"Bill Drayton"
+  ,desg:"Founder/CEO of Ashoka: Innovators for the Public"
+},{
+   
+  img:"dr-tara.jpg"
+  ,quote:"The increasing number of emotional problems among today’s youth combined with their preference to use technology makes TrustCircle an ideal platform for this population."
+  ,Name:"Dr. R. Thara"
+  ,desg:"Chairman, SCARF - The WHO Collaborating Centre (Mental Health Research, India)"
+},{
+  
+  img:"janet-c-salazar.jpeg"
+  ,quote:"TrustCircle is at the forefront of ensuring emotional well-being of our youth at scale, and FSUN is committed to fully support this life-changing initiative."
+  ,Name:"Janet C Salazar"
+  ,desg:"President and Executive Chairman Foundation for the Support for the United Nations"
+},{
+  img:"vandana-gopikumar.jpg"
+  ,quote:"TrustCircle provides humanistic care and engagement, evidence based integrated care pathways and digital technology - all coming together to help scale models and reach the under-serviced and poorly resourced."
+  ,Name:"Dr. Vandana Gopikumar"
+  ,desg:"Co-founder -The Banyan and The Banyan Academy of Leadership in Mental Health (BALM)"
+},{
+  img:"steve.png"
+  ,quote:"TrustCircle is one of the most powerful tools I have ever seen for schools to grow students' social emotional wellbeing, it has the potential to inform, transform, and even save lives."
+  ,Name:"Stephen Anderson"
+  ,desg:"Assistant Principal, Gale Ranch Middle School, CA San Ramon Unified School District, USA"
+}]
+
+const logosrc=[{src:'ashoka.png'},{src:'kbs.png'},{src:'sofina.png'},
+{src:'trustcircle.png'},{src:'unicef.png'}]
+
 const timeline=reactive([{
   imgsrc: require("@/assets/innovation.svg"),
   title: "Innovate",
@@ -68,7 +113,7 @@ console.log(timeline.imgsrc)
     <v-img src="@/assets/banner.jpeg">
     </v-img>
 </v-card>  -->
-<v-container align="center" :class="mdAndUp ? 'px-0' :'ma-0 pa-0' ">
+<v-container align="center" :class=" mdAndUp ? 'px-0' :'ma-0 pa-0' ">
         <v-card flat :class="mdAndUp ?'second-card my-n10 mx-auto justify-center' : ' ma-0 pa-0 justify-center'">
             
               <v-sheet class="justify-center text-h5 my-8 font-weight-light">
@@ -118,44 +163,9 @@ console.log(timeline.imgsrc)
             </v-col>  
         </v-row>
     </v-card>
+    <v-img height="20vh" src="@/assets/covid.png"></v-img>
     </v-card>
 </v-container>
-<!-- <v-container align="center" class="ma-0 pa-0 hidden-md-and-up">
-        <v-card class="second-card ma-0 pa-0 justify-center">
-            
-              <v-sheet class="justify-center text-h5 my-7 font-weight-light">
-                Impact of COVID-19 on mental health
-              </v-sheet>
-              <v-sheet class="justify-center text-h5 my-7 font-weight-light">
-                Impact of COVID-19 on mental health
-              </v-sheet>
-              <v-sheet class="justify-center text-h5 my-7 font-weight-light">
-                <span class=text-red-darken-2>'State of Emergency'</span>
-                in child and adolescent mental health, globally
-              </v-sheet>
-            <v-row>
-            <v-col v-for="age in agegroups"
-             :key=age
-             md="6"
-             sm="6"
-             >
-             <v-sheet class="mx-auto text-red-darken-2 my-5 text-h5 justify-center" flat>
-             <div>
-             {{ age }}
-             </div>
-             <div>
-             Mental Health Emergencies
-             </div>
-             
-             </v-sheet>
-             <v-sheet>
-             </v-sheet>
-            
-            </v-col>
-
-            </v-row>
-        </v-card>
-</v-container> -->
 <v-container align="center" class="hidden-md-and-up mx-0 px-0" >
 <v-sheet class="text-h5">We inspire “systemic change”</v-sheet>
 
@@ -163,7 +173,7 @@ console.log(timeline.imgsrc)
   v-for="(piece,i) in timeline"
   :key="i"
 >
-<v-img :src=piece.imgsrc max-width="10%" contain class="py-10"></v-img>
+<v-img :src=piece.imgsrc max-width="11%" contain class="py-10"></v-img>
 <p :class=piece.class>
 {{piece.title}}
 </p>
@@ -173,9 +183,9 @@ console.log(timeline.imgsrc)
 <v-container>
   <TimelineHome/>
 </v-container>
-<CarouselSlide />
+<QuoteSlide :anecs="anecs" />
 
-<CarouselPartner />
+<CarouselPartner heading="Partners" :logosrc=logosrc />
 
 </template>
 

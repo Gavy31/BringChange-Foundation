@@ -1,6 +1,9 @@
 <script setup>
 import HeadBanner from '@/components/HeadBanner.vue';
 import CurvedCard from '@/components/CurvedCard.vue';
+import CarouselPartner from '@/components/CarouselPartner.vue';
+
+const logos=[{src:"kbs.png"},{src:"sofina.png"},{src:"unicef.png"}]
 </script>
 
 <template>
@@ -51,4 +54,6 @@ import CurvedCard from '@/components/CurvedCard.vue';
    </a>
     </v-card>
     </v-container>
+    <CarouselPartner heading="Supported By" :logosrc=logos />
+
 </template>
