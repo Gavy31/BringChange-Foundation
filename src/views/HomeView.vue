@@ -104,8 +104,8 @@ console.log(timeline.imgsrc)
 
 <template>
 
-<HeadBanner src="banner.jpeg" align="center">
-  <div class="text-center text-h6 text-md-h4">“Nurturing wellbeing at scale, globally”</div>
+<HeadBanner src="banner.jpeg">
+  <div class="text-center text-h6 text-md-h4" justify="center">“Nurturing wellbeing at scale, globally”</div>
   <div class="text-center text-body-1 text-md-h5 pt-1">There is no health or quality education without mental health</div>
 </HeadBanner>
 
@@ -168,6 +168,7 @@ console.log(timeline.imgsrc)
 </v-container>
 <v-container align="center" class="hidden-md-and-up mx-0 px-0" >
 <v-sheet class="text-h5">We inspire “systemic change”</v-sheet>
+
 
 <v-sheet flat align="center"
   v-for="(piece,i) in timeline"

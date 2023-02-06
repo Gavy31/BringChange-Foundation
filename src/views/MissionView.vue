@@ -78,8 +78,8 @@ Founder, BringChange Foundation Inc.
 </template>
 <style scoped>
 .second-card {
-        border-top-left-radius: 50% ;
-        border-top-right-radius: 50% ;
+        border-top-left-radius: 40% ;
+        border-top-right-radius: 40% ;
     }
 
 </style>

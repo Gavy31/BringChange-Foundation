@@ -2,7 +2,6 @@
  import {defineProps} from 'vue';
  defineProps({
     src: String,
-    align: String,
     offsetmd: String,
     cardtype: String
  })
@@ -12,17 +11,17 @@
 //  }
 </script>
 <template>
-<v-container class="pa-0 ma-0 rounded-b-xl" fluid>
+<v-container class="pa-0 ma-0 " fluid height="auto">
 
-    <v-card class="first-card bg-black ma-0 pa-0 ">
+    <v-card class="first-card bg-black ma-0 pa-0" height="auto">
 
-        <v-img :src="require('@/assets/' + src)" cover gradient="to top left,rgba(0,0,0,.4),rgba(0,0,0,.4)">
-        <v-row align="center first-card small-card" >
-        <v-col :align="align" :offset-md="offsetmd">
+        <v-img height="80vh" :src="require('@/assets/' + src)" cover gradient="to top left,rgba(0,0,0,.4),rgba(0,0,0,.4)">
+<v-row justify="center" align="center" style="height :100%">
+        <v-col :offset-md="offsetmd">
             <slot/>      
         
         </v-col>
-        </v-row>
+</v-row>
     </v-img>
 </v-card>
 
@@ -34,13 +33,6 @@
     .first-card {
         border-bottom-left-radius: 25% 2%;
         border-bottom-right-radius: 25% 2%;
-        height:80vh;
-    }
-}
-@media screen and (max-width:960px){
-    
-.small-card{
-        height:80vh;
     }
 }
 </style>
