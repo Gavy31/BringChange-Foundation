@@ -8,6 +8,7 @@ import AboutTeam from '../views/AboutTeam.vue'
 import AboutContact from '../views/AboutContact.vue'
 import AboutPartners from '../views/AboutPartners.vue'
 import BlogView from '../views/BlogView.vue'
+import SingleBlog from '../views/SingleBlog.vue'
 
 const routes = [
   {
@@ -55,6 +56,11 @@ const routes = [
       name:'Blog',
       path: '/blog',
       component: BlogView
+    },
+    {
+      name:'SingleBlog',
+      path:'/singleBlog',
+      component: SingleBlog
     }
   ]
 

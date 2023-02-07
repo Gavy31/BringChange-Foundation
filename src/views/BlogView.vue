@@ -35,19 +35,6 @@ const blogheads=[{src:"1.jpeg",
 </script>
 
 <template>
-  <v-container class="pa-0 ma-0 first-card" fluid>
-    <v-img :src="require('@/assets/' + 'banner_blog.jpeg')" aspect-ratio="16/9" cover gradient="to top left,rgba(0,0,0,.4),rgba(0,0,0,.4)">
-    <v-row align="center first-card small-card" >
-    <v-col align="center">
-        <slot/>     
-        <div class="text-center text-h6 text-md-h4">Blogs and Articles</div>
-    
-    </v-col>
-    </v-row>
-</v-img>
-
-
-</v-container>
     <HeadBanner src="banner_blog.jpeg" align="center">
     <div class="text-center text-h6 text-md-h4">Blogs and Articles</div>
     </HeadBanner>
@@ -57,7 +44,7 @@ const blogheads=[{src:"1.jpeg",
    md=4 xl=3 cols=12
     v-for="(blogs,i) in blogheads"
     :key="i">
-      <v-card to="About" >
+      <v-card to="SingleBlog" >
       <v-img :src="require('@/assets/Blog/'+blogs.src)">
       </v-img>
       <v-card-text>{{blogs.Title}}</v-card-text> 

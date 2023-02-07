@@ -16,6 +16,28 @@ import { ref } from 'vue'
                     title: 'Blog',
                     value: 'Blog'
             }]
+    
+    const Initiatives=[{
+                    title: 'Unicef',
+                    value: 'Unicef'
+                },
+                {
+                    title: 'Malaysia',
+                    value: 'Malaysia'
+                }]
+    const About=[{
+                title: 'Partners',
+                value: 'Partners'
+                
+                },
+                {
+                    title: 'Team',
+                    value: 'Team'
+                },
+                {
+                    title: 'Contact',
+                    value: 'Contact'
+                }]
     const Dropdowns=[{
                 title:'Initiatives',
                 value:[{
@@ -100,7 +122,8 @@ import { ref } from 'vue'
         <v-sheet class="bg-black text-white hidden-sm-and-down">
           <v-btn variant="plain" to="/" > Home</v-btn>
           <v-btn  variant="plain" to="Mission" class="hidden-sm-and-down"> Mission</v-btn>
-          <ExtendMenu Name="Initiatives" :Exmenu="Inititatives"/>
+
+          <ExtendMenu Name="Initiatives" :Exmenu="Initiatives"/>
          <ExtendMenu Name="About" :Exmenu="About" />
         <v-btn variant="plain" to="Blog" class="hidden-sm-and-down"> Blog</v-btn>
         <v-btn class="bg-blue-darken-2" rounded="lg" size="small" align=center> Donate</v-btn>
